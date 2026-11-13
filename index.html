@@ -1036,7 +1036,7 @@
     const all = (window.REVIEWS || []).map(r => ({ s: r[0], date: r[1], name: r[2], text: r[3] }));
     const grid = document.getElementById('reviewsGrid');
     const more = document.getElementById('moreBtn');
-    const STEP = 9;
+    const STEP = 3;
     let filter = 'all', shown = STEP;
     const esc = t => t.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
     const list = () => all.filter(r => filter === 'all' || (filter === 'good' ? r.s >= 4 : r.s <= 3));
